@@ -1,9 +1,19 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router
+    .route('/json')
+    .get(function(req, res) {
+        console.log("GET the homepage");
+        res
+            .status(200)
+            .json({"jsonData": true});
+    })
+    .post(function(req, res){
+            console.log("POST the json route");
+            res
+                .status(200)
+                .json({"jsonData": "POST received"});
+    });
 
 module.exports = router;

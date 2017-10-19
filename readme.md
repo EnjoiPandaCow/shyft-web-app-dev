@@ -1,0 +1,1 @@
+This repo contains the Shyft Mean Stack Application.
