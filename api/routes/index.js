@@ -11,4 +11,8 @@ router
     .route('/jobs/:jobId')
     .get(ctrlJobs.jobsGetOne);
 
+router
+    .route('/jobs/new')
+    .post(ctrlJobs.jobsAddOne);
+
 module.exports = router;
